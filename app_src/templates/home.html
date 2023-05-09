@@ -1,7 +1,68 @@
 {% extends "layout.html" %}
 {% block title %}
-Home
 {% endblock %}
 {% block content %}
-<p>Home page for the Flask example.</p>
+<h1>Terminbuchung</h1>
+
+<p><b>Wählen Sie einen Termin:</b></p>
+
+<form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
+    <fieldset>
+      <legend>Ihre Daten</legend>
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+      <div class="two-cols">
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Telefon
+          <input type="tel" name="phone">
+        </label>
+      </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+      <legend>Gewünschter Termin</legend>
+      <div class="two-cols">
+        <label>
+          Datum
+          <input type="date" name="Appointment request" required>
+        </label>
+        <div class="inline">
+          <label>
+            <input type="hidden" name="Morning desired" value="no">
+            <input type="checkbox" name="Morning desired" value="yes">
+            Vormittags
+          </label>
+          <label>
+            <input type="hidden" name="Afternoon desired" value="no">
+            <input type="checkbox" name="Afternoon desired" value="yes">
+            Nachmittags
+          </label>
+        </div>
+      </div>
+      <p>Bestätigung gewünscht via</p>
+      <div class="inline">
+        <label>
+          <input type="radio" name="Confirmation requested by" value="email" checked>
+          Email
+        </label>
+        <label>
+          <input type="radio" name="Confirmation requested by" value="phone">
+          Anruf
+        </label>
+      </div>
+    </fieldset>
+    <br><br>
+    <div class="btns">
+      <input type="text" name="_gotcha" value="" style="display:none;">
+      <input type="submit" value="Abschicken">
+    </div>
+  </form>
+  <br><br><br><br>
+
 {% endblock %}
