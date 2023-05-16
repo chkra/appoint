@@ -1,0 +1,153 @@
+{% extends "home.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+
+
+{% block header %}                
+{{ super() }}
+{% endblock %} 
+
+{% block table %}
+
+
+      
+
+<div class="calendar-table">
+    <div class="calendar-head">
+        <h2 class="title">Bitte wählen Sie ein Datum:</h2>
+        <div class="calendar-legend">
+          <span class="legend-element"><span class="legend-color buchbar">&nbsp;</span>verfügbar</span>
+          <span class="legend-element"><span class="legend-color nichtbuchbar">&nbsp;</span>ausgebucht</span>
+        </div>
+    </div>
+
+    <div class="row-fluid">       
+        <div class="calendar-month-table span6">
+            <table style="margin-bottom:-1px;">
+            <thead>
+                <tr class="controll">
+                    <th class="prev">
+                        <a tabindex="0" aria-label="zu vorherigem Monat ab 01.06.2023" title="zu vorherigem Monat ab 01.06.2023" href="/terminvereinbarung/termin/day/1685570400/">«</a>
+                    </th>
+                    <th colspan="5" class="month">Juli 2023</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="dayname">
+                <th aria-label=Montag title=Montag>Mo</th>
+                <th aria-label=Dienstag title=Dienstag>Di</th>
+                <th aria-label=Mittwoch title=Mittwoch>Mi</th>
+                <th aria-label=Donnerstag title=Donnerstag>Do</th>
+                <th aria-label=Freitag title=Freitag>Fr</th>
+                <th aria-label=Samstag title=Samstag>Sa</th>
+                <th aria-label=Sonntag title=Sonntag class="sonnfeiertag">So</th>
+            </tr>
+            </tbody></table>
+        </div>
+
+        <div class="calendar-month-table span6">
+            <table style="margin-bottom:-1px;">
+            <thead>
+                <tr class="controll">
+                    <th>&nbsp;</th>
+                    <th colspan="5" class="month">August 2023</th>
+                    <th class="next">
+                        <a tabindex="0" aria-label="zu nächstem Monat ab 01.09.2023" title="zu nächstem Monat ab 01.09.2023" href="/terminvereinbarung/termin/day/1690840800/">»</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="dayname">
+                <th aria-label=Montag title=Montag>Mo</th>
+                <th aria-label=Dienstag title=Dienstag>Di</th>
+                <th aria-label=Mittwoch title=Mittwoch>Mi</th>
+                <th aria-label=Donnerstag title=Donnerstag>Do</th>
+                <th aria-label=Freitag title=Freitag>Fr</th>
+                <th aria-label=Samstag title=Samstag>Sa</th>
+                <th aria-label=Sonntag title=Sonntag class="sonnfeiertag">So</th>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row-fluid">
+        <div class="calendar-month-table span6">
+            <table>
+            <tbody>
+                <tr>
+                    <td  class="" aria-label="01.05.2023 - An diesem Tag sind keine Termine möglich" title="01.05.2023 - An diesem Tag sind keine Termine möglich">01</td>
+                    <td  class="" aria-label="02.05.2023 - An diesem Tag sind keine Termine möglich" title="02.05.2023 - An diesem Tag sind keine Termine möglich">02</td>
+                    <td  class="" aria-label="03.05.2023 - An diesem Tag sind keine Termine möglich" title="03.05.2023 - An diesem Tag sind keine Termine möglich">03</td>
+                    <td  class="" aria-label="04.05.2023 - An diesem Tag sind keine Termine möglich" title="04.05.2023 - An diesem Tag sind keine Termine möglich">04</td>
+                    <td  class="" aria-label="05.05.2023 - An diesem Tag sind keine Termine möglich" title="05.05.2023 - An diesem Tag sind keine Termine möglich">05</td>
+                    <td  class="" aria-label="06.05.2023 - An diesem Tag sind keine Termine möglich" title="06.05.2023 - An diesem Tag sind keine Termine möglich">06</td>
+                    <td  class="" aria-label="07.05.2023 - An diesem Tag sind keine Termine möglich" title="07.05.2023 - An diesem Tag sind keine Termine möglich">07</td>
+                </tr>
+                <tr>
+                    <td  class="" aria-label="08.05.2023 - An diesem Tag sind keine Termine möglich" title="08.05.2023 - An diesem Tag sind keine Termine möglich">08</td>
+                    <td  class="" aria-label="09.05.2023 - An diesem Tag sind keine Termine möglich" title="09.05.2023 - An diesem Tag sind keine Termine möglich">09</td>
+                    <td  class="" aria-label="10.05.2023 - An diesem Tag sind keine Termine möglich" title="10.05.2023 - An diesem Tag sind keine Termine möglich">10</td>
+                    <td  class="" aria-label="11.05.2023 - An diesem Tag sind keine Termine möglich" title="11.05.2023 - An diesem Tag sind keine Termine möglich">11</td>
+                    <td  class="" aria-label="12.05.2023 - An diesem Tag sind keine Termine möglich" title="12.05.2023 - An diesem Tag sind keine Termine möglich">12</td>
+                    <td  class="" aria-label="13.05.2023 - An diesem Tag sind keine Termine möglich" title="13.05.2023 - An diesem Tag sind keine Termine möglich">13</td>
+                    <td  class="" aria-label="14.05.2023 - An diesem Tag sind keine Termine möglich" title="14.05.2023 - An diesem Tag sind keine Termine möglich">14</td>
+                </tr>
+                <tr>
+                    <td  class="" aria-label="15.05.2023 - An diesem Tag sind keine Termine möglich" title="15.05.2023 - An diesem Tag sind keine Termine möglich">15</td>
+                    <td class="buchbar heutemarkierung"><a tabindex=0 aria-label="16.05.2023 - An diesem Tag einen Termin buchen" title="16.05.2023 - An diesem Tag einen Termin buchen" href="/terminvereinbarung/termin/time/1684188000/">16</a></td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="17.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="17.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">17</td>
+                    <td tabindex=0 class="" aria-label="18.05.2023 - An diesem Tag sind keine Termine möglich" title="18.05.2023 - An diesem Tag sind keine Termine möglich">18</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="19.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="19.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">19</td>
+                    <td tabindex=0 class="" aria-label="20.05.2023 - An diesem Tag sind keine Termine möglich" title="20.05.2023 - An diesem Tag sind keine Termine möglich">20</td>
+                    <td  class="" aria-label="21.05.2023 - An diesem Tag sind keine Termine möglich" title="21.05.2023 - An diesem Tag sind keine Termine möglich">21</td>
+                </tr>
+                <tr>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="22.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="22.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">22</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="23.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="23.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">23</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="24.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="24.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">24</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="25.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="25.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">25</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="26.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="26.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">26</td>
+                    <td tabindex=0 class="" aria-label="27.05.2023 - An diesem Tag sind keine Termine möglich" title="27.05.2023 - An diesem Tag sind keine Termine möglich">27</td>
+                    <td  class="" aria-label="28.05.2023 - An diesem Tag sind keine Termine möglich" title="28.05.2023 - An diesem Tag sind keine Termine möglich">28</td>
+                </tr>
+                <tr>
+                    <td tabindex=0 class="" aria-label="29.05.2023 - An diesem Tag sind keine Termine möglich" title="29.05.2023 - An diesem Tag sind keine Termine möglich">29</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="30.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="30.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">30</td>
+                    <td tabindex=0 class="nichtbuchbar" aria-label="31.05.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="31.05.2023 - An diesem Tag sind keine Termine mehr verfügbar">31</td>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+
+    
+        <div class="calendar-month-table span6">
+            <table>
+            <tbody>
+                <tr>
+
+                    {% for day in days %}
+                        {% if day.number % 7 == 1  %} <tr> {% endif %}
+                            {% if day.status == 0 %} <td class="buchbar heutemarkierung"><a tabindex=0 aria-label="An diesem Tag einen Termin buchen" title="An diesem Tag einen Termin buchen" href="404">  {{ day.number }} </a></td>{% endif %}
+                            {% if day.status == 1 %} <td tabindex=0 class="nichtbuchbar" aria-label="An diesem Tag sind keine Termine mehr verfügbar" title="An diesem Tag sind keine Termine mehr verfügbar"> {{ day.number }} </td>{% endif %}
+                        {% if day.number % 7 == 0  %} </tr> {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}                
+{% block foot %}
+{{ super() }}
+{% endblock %}                
+{% endblock %}

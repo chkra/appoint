@@ -4,7 +4,17 @@ from . import app
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    days = [ ]
+    for i in range(1, 32):
+        if ((i-1) % 7 < 3):
+            days.append( {"number": i, "status": 0})
+        else:
+            days.append( {"number": i, "status": 1})
+
+    context = {
+        "days" : days
+    }
+    return render_template("table.html", **context)
 
 @app.route("/about/")
 def about():

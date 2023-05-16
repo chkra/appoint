@@ -3,23 +3,36 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css') }}"  />
+        <meta name="robots" content="NOINDEX NOFOLLOW">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css') }}"  />  -->
+        <link rel="stylesheet" href="https://service.berlin.de/i9f/r1/bundle/default.css?ts=1684165590" media="all">
+        <link rel="stylesheet" type="text/css" href="https://service.berlin.de/i9f/v4/css/sub-vendor.css?ts=1684165590"/>
+        <link rel="stylesheet" type="text/css" href="https://service.berlin.de/i9f/v4/css/bde-bootstrap.css?ts=1684165590"/>
+        <link rel="stylesheet" type="text/css" href="https://service.berlin.de/i9f/v4/css/bde-index.css?ts=1684165590"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="https://service.berlin.de/i9f/v4/css/images/misc/apple-touch-icon.png" type="image/png"/>
+        <link rel="icon" type="image/png" href="https://service.berlin.de/i9f/r1/images/favicon/Berlin_de-32x32.png">
+        <meta name="og:image" content="http://service.berlin.de/i9f/r1/images/favicon/Berlin_de_FB_Social.png" />
+        <meta name="og:image:secure_url" content="https://service.berlin.de/i9f/r1/images/favicon/Berlin_de_FB_Social.png" />
+
     </head>
 
     <body>
-        <div class="navbar">
-            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
-            <a href="{{ url_for('about') }}" class="navbar-item">Über uns</a>
-            <a href="{{ url_for('contact') }}" class="navbar-item">Kontakt</a>
-        </div>
 
         <div class="body-content">
             {% block content %}
             {% endblock %}
-            <hr/>
-            <footer>
-                <p>&copy; CK | HTW Berlin 2023</p>
-            </footer>
         </div>
     </body>
 </html>
+
+
+
+
+

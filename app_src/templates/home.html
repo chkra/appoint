@@ -1,68 +1,651 @@
 {% extends "layout.html" %}
-{% block title %}
-{% endblock %}
+{% block title %} {% endblock %}
 {% block content %}
-<h1>Terminbuchung</h1>
 
-<p><b>Wählen Sie einen Termin:</b></p>
 
-<form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
-    <fieldset>
-      <legend>Ihre Daten</legend>
-      <label>
-        Name
-        <input type="text" name="name" required>
-      </label>
-      <div class="two-cols">
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Telefon
-          <input type="tel" name="phone">
-        </label>
-      </div>
-    </fieldset>
-    <br><br>
-    <fieldset>
-      <legend>Gewünschter Termin</legend>
-      <div class="two-cols">
-        <label>
-          Datum
-          <input type="date" name="Appointment request" required>
-        </label>
-        <div class="inline">
-          <label>
-            <input type="hidden" name="Morning desired" value="no">
-            <input type="checkbox" name="Morning desired" value="yes">
-            Vormittags
-          </label>
-          <label>
-            <input type="hidden" name="Afternoon desired" value="no">
-            <input type="checkbox" name="Afternoon desired" value="yes">
-            Nachmittags
-          </label>
+{% block header %}                
+
+            <div class="skyscraper palm-hide hidden-phone">
+<!-- kommunal: beberlin -->
+</div>
+
+<!-- START: PAGEWRAPPER -->
+<div id="page-wrapper" class=" container-content ">
+    <div class="container-wrapper container-portal-header" style="display:none !important">
         </div>
-      </div>
-      <p>Bestätigung gewünscht via</p>
-      <div class="inline">
-        <label>
-          <input type="radio" name="Confirmation requested by" value="email" checked>
-          Email
-        </label>
-        <label>
-          <input type="radio" name="Confirmation requested by" value="phone">
-          Anruf
-        </label>
-      </div>
-    </fieldset>
-    <br><br>
-    <div class="btns">
-      <input type="text" name="_gotcha" value="" style="display:none;">
-      <input type="submit" value="Abschicken">
+    <!-- START: PORTALHEADER -->
+    <header id="header" class="kiekma" data-nosnippet="true">
+
+                <!-- Portal.view -->
+<div class="header__row-portalbrand">
+    <div class="logo">
+        <!-- <a href="https://www.berlin.de">
+            <img class="logo" title="Link f&#252;hrt zur Startseite von Merlin.de" alt="Bild zeigt: Merlin.de Logo" src="//service.berlin.de/i9f/r1/images/logo_berlin_m_srgb.svg" />
+        </a> -->
     </div>
-  </form>
-  <br><br><br><br>
+</div>
+
+
+<!-- /Portal.view -->
+
+                <!-- Horizontal.view -->
+<div class="header__row-pageheader">
+
+        <div class="pageheader__logo without-logo">
+                            <p class="textlogo">
+                <a href="https://service.berlin.de/" title="Startseite von &#34;Service-Portal Merlin&#34;"><span class="institution">Service-Portal</span><span class="title">Merlin</span></a>            </p>
+            </div>
+        <nav class="pageheader__quicklinks" aria-label="Bereichsnavigation">
+                <ul>
+            <li class="">
+    <a href="https://service.berlin.de/dienstleistungen/" >Dienst&#173;leistungen</a>        </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/" >Standorte</a>        </li>
+        <li class=" active">
+    <a href="https://service.berlin.de/terminvereinbarung/" >Termin&#173;vereinbarung</a>        </li>
+        <li class="">
+    <a href="https://service.berlin.de/online-erledigen/" >Online erledigen</a>        </li>
+        <li class="">
+    <a href="https://service.berlin.de/app/" >App</a>        </li>
+        <li class="">
+    <a href="https://service.berlin.de/themen/" >Themen</a>        </li>                                    <li></li>
+                    </ul>
+    </nav>
+        <div class="pageheader__services">
+                <div id="servicebuttonAccessibility" class="service-button-overlay js-service-button-overlay accessibility" data-nosnippet="true">
+        <div class="service-button-overlay__button">
+        <button type="button" class="icon-button js-button-overlay-open" aria-haspopup="dialog">
+            <i class="icon fas fa-universal-access" aria-hidden="true"></i>
+            <span class="aural">Einstellungen zur Barrierefreiheit &#246;ffnen</span>
+            <span class="text">Barrierefrei</span>
+        </button>
+    </div>
+        <div class="service-button-overlay__overlay overlay js-overlay-container" aria-modal="true" role="dialog">
+        <div class="overlay__header">
+            <h2 class="heading">Barrierefreiheit</h2>
+            <button type="button" class="close-button js-button-overlay-close">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="aural">Schlie&#223;en: Barrierefreiheit</span>
+            </button>
+        </div>
+        <div class="overlay__body">
+            <div class="inner">
+
+                
+                
+                <h3>Wo gibt es zus&#228;tzliche Informationen zur Barrierefreiheit im Land Merlin?</h3>
+                <a href="https://www.berlin.de/moderne-verwaltung/barrierefreie-it/" class="extern" target="_blank" title=" (&#214;ffnet in neuem Fenster)">Barrierefreie Informations- und Kommunikationstechnik (IKT)</a>            </div>
+        </div>
+    </div>
+</div>
+
+        
+                            <div id="servicebuttonSearch" class="service-button-overlay js-service-button-overlay search fullwidth">
+                        <div class="service-button-overlay__button">
+                <button type="button" class="icon-button js-button-overlay-open" aria-haspopup="dialog">
+                    <i class="icon fa fa-search" aria-hidden="true"></i>
+                    <span class="text">Suche</span>
+                </button>
+            </div>
+                        <div class="service-button-overlay__overlay overlay js-overlay-container"  aria-modal="true" role="dialog">
+                <div class="overlay__header">
+                    <h2 class="heading"><span class="aural">Suche</span></h2>
+                    <button type="button" class="close-button js-button-overlay-close"><i class="fas fa-times" aria-hidden="true"></i><span class="aural">Men&#252; schlie&#223;en</span></button>
+                </div>
+                <div class="overlay__body">
+                    <div class="search-container">
+                        <form class="search-form institutionssuche" method="get" action="https://service.berlin.de/suche/stichwort/">
+    <label class="" for="searchFormInput_q" id="aural_institutionssuche">
+        Suche auf der Internetseite &#34;Service-Portal Merlin&#34;    </label>
+    <div class="form-group " role="search">
+        <input
+            class="form-control"
+            type="search"
+            id="searchFormInput_q"
+            placeholder="Suchbegriff"
+            name="x"
+            aria-labelledby="aural_institutionssuche"
+            maxlength="255"
+            title="Hier k&#246;nnen Sie einen Text eingeben, um die Internetseite &#34;Service-Portal Merlin&#34; zu durchsuchen"
+        />
+        <button type="submit" class="button">
+            <i class="fas fa-search" aria-hidden="true"></i> <span>Suchen</span>
+        </button>
+    </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <div id="servicebuttonMenu" class="service-button-overlay js-service-button-overlay menu">
+                        <div class="service-button-overlay__button">
+                <button type="button" class="icon-button js-button-overlay-open" aria-haspopup="menu">
+                    <i class="icon fa fa-bars" aria-hidden="true"></i>
+                    <span class="text">Men&#252;</span>
+                </button>
+            </div>
+            <div class="service-button-overlay__overlay overlay js-overlay-container" aria-modal="true" role="dialog">
+                <div class="overlay__header">
+                    <h2 class="heading">Hauptnavigation</h2>
+                    <button type="button" class="close-button js-button-overlay-close"><i class="fas fa-times" aria-hidden="true"></i><span class="aural">Men&#252; schlie&#223;en</span></button>
+                </div>
+                <div class="overlay__body">
+                    <nav id="navigation-primary" class="js-navigation-primary" aria-label="Hauptnavigation">
+                                                <div class="tree-wrapper js-navigation-tree-wrapper">
+                            <ul class="navigation-tree">
+            <li class="">
+    <a href="https://service.berlin.de/dienstleistungen/" >Dienst&#173;leistungen</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/" >Standorte</a>    <ul class="navigation-tree">        <li class="">
+    <a href="https://service.berlin.de/standorte/" >Standorte A-Z</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/behoerden/" >Beh&#246;rden A-Z</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/serviceatlas/" >Serviceatlas</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/buergeraemter/" >B&#252;rger&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/einwanderungsamt/" >Einwanderungs&#173;amt</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/finanzaemter/" >Finanz&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/gesundheitsaemter/" >Gesundheits&#173;&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/jugendaemter/" >Jugend&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/kfz-zulassungsstellen/" >KFZ-Zulassungs&#173;stellen</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/ordnungsaemter/" >Ordnungs&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/sozialaemter/" >Sozial&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/standesaemter/" >Standes&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/wahlaemter/" >Wahl&#228;mter</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/standorte/weitere/" >Weitere Standorte</a>    
+    </li>
+</ul>
+    </li>
+        <li class=" active">
+    <a href="https://service.berlin.de/terminvereinbarung/" >Termin&#173;vereinbarung</a>    <ul class="navigation-tree">        <li class="">
+    <a href="https://service.berlin.de/terminvereinbarung/hinweise/" >Hinweise</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/terminvereinbarung/termin/manage/" >Termin &#228;ndern</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/terminvereinbarung/datenschutzerklaerung/" >Datenschutz&#173;erkl&#228;rung</a>    
+    </li>
+</ul>
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/online-erledigen/" >Online erledigen</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/app/" >App</a>    <ul class="navigation-tree">        <li class="">
+    <a href="https://service.berlin.de/app/datenschutzerklaerung/" >Daten&#173;schutz&#173;erkl&#228;rung</a>    
+    </li>
+</ul>
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/themen/" >Themen</a>    <ul class="navigation-tree">        <li class="">
+    <a href="https://service.berlin.de/arbeit-beruf-soziales/" >Arbeit, Beruf und Soziales</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/auto-verkehr/" >Auto und Verkehr</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/behinderung/" >Behinderung</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/familie-partnerschaft-gleichstellung/" >Familie, Partnerschaft und Gleichstellung</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/freizeit-sport/" >Freizeit und Sport</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/gesundheit-pflege/" >Gesundheit und Pflege</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/kultur-medien-wissenschaft/" >Kultur, Medien und Wissenschaft</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/meldewesen-ordnung/" >Meldewesen und Ordnung</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/migration-integration/" >Migration und Integration</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/politik-engagement/" >Politik und Engagement</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/schule-ausbildung-studium/" >Schule, Ausbildung und Studium</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/sicherheit-notlagen/" >Sicherheit und Notlagen</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/steuern-finanzen-recht/" >Steuern, Finanzen und Recht</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/tourismus-veranstaltungen/" >Tourismus und Veranstaltungen</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/umwelt-natur-tiere/" >Umwelt, Natur und Tiere</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/verbraucherschutz/" >Verbraucher&#173;schutz</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/wirtschaft/" >Wirtschaft</a>    
+    </li>
+        <li class="">
+    <a href="https://service.berlin.de/wohnen-bauen/" >Wohnen und Bauen</a>    
+    </li>
+</ul>
+    </li>
+</ul>
+                        </div>
+                                                <!-- Meta.view -->
+
+        
+    <!-- Global Languagelist -->
+
+    
+    <!-- Metalinks (socialmedia, login, einfache Sprache, ...) -->
+    
+    <!-- Login -->
+        
+<!-- /Meta.view -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+</div><!-- /#pageheader -->
+
+
+
+<!-- /Horizontal.view -->
+
+    </header>
+    <!-- END: PORTALHEADER -->
+
+    <!-- START: CONTENTWRAPPERGRID -->
+    <div role="main" id="layout-grid" class="template-land_overview">
+
+        <div id="layout-grid__area--contentheader">
+        <div id="content-header">
+                                                                                </div>
+    </div>
+
+    <div id="layout-grid__area--leftcolumn">
+    </div>
+    <div id="layout-grid__area--marginal">
+    </div>
+
+    <div id="layout-grid__area--maincontent">
+        <div class="container-wrapper">
+            <div class="container">
+
+
+                           	    <div class="row row-breadcrumb noprint">
+        <div class="span10">
+            <div class="html5-section breadcrumb">
+                <ul>
+                	<li><a href="https://service.berlin.de" class="homehaus">Service Merlin</a></li>
+                	<li><a href="https://service.berlin.de/terminvereinbarung/" class="pos1">Terminvereinbarung</a></li>
+                </ul>
+    		</div>
+        </div>
+    </div>
+
+        
+        <div class="row">
+        	<div class="span2 column-left">
+                            <!-- NAVIGATION BEGIN: vertical -->
+<!-- NAVIGATION END: vertical -->
+
+
+            			</div>
+            <div class="span7 column-content">
+               	<div class="html5-section article" role="main">
+        			<div class="zms">
+        					    <div class="html5-header header">
+    <h1 class="title">Terminvereinbarung</h1>
+</div>
+
+                                                            <div class="collapsible-group closed">
+    <div class="collapsible-heading row-fluid">
+    <div class="collapsible-toggle">
+        <div class="table-cell collapsible-counter span1">1</div>
+        <div class="table-cell collapsible-title span3">Dienstleistung</div>
+        <div class="table-cell collapsible-description span7">
+        	<ul class="list-bullet">
+            <li data-url="https://service.berlin.de/dienstleistung/120703/">Personalausweis beantragen</li>
+    </ul>
+
+        </div>
+                <div class="table-cell collapsible-options span1">
+        	<a href="https://service.berlin.de/dienstleistungen/" class="edit icon-pencil" title="Zur Dienstleistungsauswahl">Bearbeiten</a>
+        </div>
+            </div>
+</div>
+
+</div>
+
+		    <div class="collapsible-group">
+    <div class="collapsible-heading row-fluid">
+    <div class="collapsible-toggle">
+        <div class="table-cell collapsible-counter span1">2</div>
+        <div class="table-cell collapsible-title span11">Datum</div>
+        <div class="table-cell collapsible-description span7">
+        	
+        </div>
+            </div>
+</div>
+
+</div>
+
+<div class="collapsible-body">
+
+{% endblock %}                
+{% block table %}
+
+		
+
+        <div class="row-fluid">
+            <div class="calendar-month-table span6">
+                <table>
+                                                            <tbody>
+                        <tr>
+                                                                <td colspan="5"></td>
+    <td tabindex=0 class="" aria-label="01.07.2023 - An diesem Tag sind keine Termine möglich" title="01.07.2023 - An diesem Tag sind keine Termine möglich">01</td>
+
+        <td  class="" aria-label="02.07.2023 - An diesem Tag sind keine Termine möglich" title="02.07.2023 - An diesem Tag sind keine Termine möglich">02</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="nichtbuchbar" aria-label="03.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="03.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">03</td>
+    
+        <td tabindex=0 class="nichtbuchbar" aria-label="04.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="04.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">04</td>
+    
+        <td tabindex=0 class="nichtbuchbar" aria-label="05.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="05.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">05</td>
+    
+        <td tabindex=0 class="nichtbuchbar" aria-label="06.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="06.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">06</td>
+    
+        <td tabindex=0 class="nichtbuchbar" aria-label="07.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="07.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">07</td>
+    
+        <td tabindex=0 class="" aria-label="08.07.2023 - An diesem Tag sind keine Termine möglich" title="08.07.2023 - An diesem Tag sind keine Termine möglich">08</td>
+
+        <td  class="" aria-label="09.07.2023 - An diesem Tag sind keine Termine möglich" title="09.07.2023 - An diesem Tag sind keine Termine möglich">09</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="nichtbuchbar" aria-label="10.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="10.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">10</td>
+    
+            <td class="buchbar"><a tabindex=0 aria-label="11.07.2023 - An diesem Tag einen Termin buchen" title="11.07.2023 - An diesem Tag einen Termin buchen" href="/terminvereinbarung/termin/time/1689026400/">11</a></td>
+    
+        <td tabindex=0 class="" aria-label="12.07.2023 - An diesem Tag sind keine Termine möglich" title="12.07.2023 - An diesem Tag sind keine Termine möglich">12</td>
+
+        <td tabindex=0 class="nichtbuchbar" aria-label="13.07.2023 - An diesem Tag sind keine Termine mehr verfügbar" title="13.07.2023 - An diesem Tag sind keine Termine mehr verfügbar">13</td>
+    
+        <td tabindex=0 class="" aria-label="14.07.2023 - An diesem Tag sind keine Termine möglich" title="14.07.2023 - An diesem Tag sind keine Termine möglich">14</td>
+
+        <td tabindex=0 class="" aria-label="15.07.2023 - An diesem Tag sind keine Termine möglich" title="15.07.2023 - An diesem Tag sind keine Termine möglich">15</td>
+
+        <td  class="" aria-label="16.07.2023 - An diesem Tag sind keine Termine möglich" title="16.07.2023 - An diesem Tag sind keine Termine möglich">16</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="17.07.2023 - An diesem Tag sind keine Termine möglich" title="17.07.2023 - An diesem Tag sind keine Termine möglich">17</td>
+
+        <td tabindex=0 class="" aria-label="18.07.2023 - An diesem Tag sind keine Termine möglich" title="18.07.2023 - An diesem Tag sind keine Termine möglich">18</td>
+
+        <td tabindex=0 class="" aria-label="19.07.2023 - An diesem Tag sind keine Termine möglich" title="19.07.2023 - An diesem Tag sind keine Termine möglich">19</td>
+
+        <td tabindex=0 class="" aria-label="20.07.2023 - An diesem Tag sind keine Termine möglich" title="20.07.2023 - An diesem Tag sind keine Termine möglich">20</td>
+
+        <td tabindex=0 class="" aria-label="21.07.2023 - An diesem Tag sind keine Termine möglich" title="21.07.2023 - An diesem Tag sind keine Termine möglich">21</td>
+
+        <td tabindex=0 class="" aria-label="22.07.2023 - An diesem Tag sind keine Termine möglich" title="22.07.2023 - An diesem Tag sind keine Termine möglich">22</td>
+
+        <td  class="" aria-label="23.07.2023 - An diesem Tag sind keine Termine möglich" title="23.07.2023 - An diesem Tag sind keine Termine möglich">23</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="24.07.2023 - An diesem Tag sind keine Termine möglich" title="24.07.2023 - An diesem Tag sind keine Termine möglich">24</td>
+
+        <td tabindex=0 class="" aria-label="25.07.2023 - An diesem Tag sind keine Termine möglich" title="25.07.2023 - An diesem Tag sind keine Termine möglich">25</td>
+
+        <td tabindex=0 class="" aria-label="26.07.2023 - An diesem Tag sind keine Termine möglich" title="26.07.2023 - An diesem Tag sind keine Termine möglich">26</td>
+
+        <td tabindex=0 class="" aria-label="27.07.2023 - An diesem Tag sind keine Termine möglich" title="27.07.2023 - An diesem Tag sind keine Termine möglich">27</td>
+
+        <td tabindex=0 class="" aria-label="28.07.2023 - An diesem Tag sind keine Termine möglich" title="28.07.2023 - An diesem Tag sind keine Termine möglich">28</td>
+
+        <td tabindex=0 class="" aria-label="29.07.2023 - An diesem Tag sind keine Termine möglich" title="29.07.2023 - An diesem Tag sind keine Termine möglich">29</td>
+
+        <td  class="" aria-label="30.07.2023 - An diesem Tag sind keine Termine möglich" title="30.07.2023 - An diesem Tag sind keine Termine möglich">30</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="31.07.2023 - An diesem Tag sind keine Termine möglich" title="31.07.2023 - An diesem Tag sind keine Termine möglich">31</td>
+
+    <td colspan="6">&nbsp;</td>
+                                                                                                                                                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div class="calendar-month-table span6">
+
+
+
+                <table>
+                                                                                <tbody>
+                        <tr>
+                                                                <td colspan="1"></td>
+    <td tabindex=0 class="" aria-label="01.08.2023 - An diesem Tag sind keine Termine möglich" title="01.08.2023 - An diesem Tag sind keine Termine möglich">01</td>
+
+        <td tabindex=0 class="" aria-label="02.08.2023 - An diesem Tag sind keine Termine möglich" title="02.08.2023 - An diesem Tag sind keine Termine möglich">02</td>
+
+        <td tabindex=0 class="" aria-label="03.08.2023 - An diesem Tag sind keine Termine möglich" title="03.08.2023 - An diesem Tag sind keine Termine möglich">03</td>
+
+        <td tabindex=0 class="" aria-label="04.08.2023 - An diesem Tag sind keine Termine möglich" title="04.08.2023 - An diesem Tag sind keine Termine möglich">04</td>
+
+        <td tabindex=0 class="" aria-label="05.08.2023 - An diesem Tag sind keine Termine möglich" title="05.08.2023 - An diesem Tag sind keine Termine möglich">05</td>
+
+        <td  class="" aria-label="06.08.2023 - An diesem Tag sind keine Termine möglich" title="06.08.2023 - An diesem Tag sind keine Termine möglich">06</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="07.08.2023 - An diesem Tag sind keine Termine möglich" title="07.08.2023 - An diesem Tag sind keine Termine möglich">07</td>
+
+        <td tabindex=0 class="" aria-label="08.08.2023 - An diesem Tag sind keine Termine möglich" title="08.08.2023 - An diesem Tag sind keine Termine möglich">08</td>
+
+        <td tabindex=0 class="" aria-label="09.08.2023 - An diesem Tag sind keine Termine möglich" title="09.08.2023 - An diesem Tag sind keine Termine möglich">09</td>
+
+        <td tabindex=0 class="" aria-label="10.08.2023 - An diesem Tag sind keine Termine möglich" title="10.08.2023 - An diesem Tag sind keine Termine möglich">10</td>
+
+        <td tabindex=0 class="" aria-label="11.08.2023 - An diesem Tag sind keine Termine möglich" title="11.08.2023 - An diesem Tag sind keine Termine möglich">11</td>
+
+        <td tabindex=0 class="" aria-label="12.08.2023 - An diesem Tag sind keine Termine möglich" title="12.08.2023 - An diesem Tag sind keine Termine möglich">12</td>
+
+        <td  class="" aria-label="13.08.2023 - An diesem Tag sind keine Termine möglich" title="13.08.2023 - An diesem Tag sind keine Termine möglich">13</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="14.08.2023 - An diesem Tag sind keine Termine möglich" title="14.08.2023 - An diesem Tag sind keine Termine möglich">14</td>
+
+        <td tabindex=0 class="" aria-label="15.08.2023 - An diesem Tag sind keine Termine möglich" title="15.08.2023 - An diesem Tag sind keine Termine möglich">15</td>
+
+        <td tabindex=0 class="" aria-label="16.08.2023 - An diesem Tag sind keine Termine möglich" title="16.08.2023 - An diesem Tag sind keine Termine möglich">16</td>
+
+        <td tabindex=0 class="" aria-label="17.08.2023 - An diesem Tag sind keine Termine möglich" title="17.08.2023 - An diesem Tag sind keine Termine möglich">17</td>
+
+        <td tabindex=0 class="" aria-label="18.08.2023 - An diesem Tag sind keine Termine möglich" title="18.08.2023 - An diesem Tag sind keine Termine möglich">18</td>
+
+        <td tabindex=0 class="" aria-label="19.08.2023 - An diesem Tag sind keine Termine möglich" title="19.08.2023 - An diesem Tag sind keine Termine möglich">19</td>
+
+        <td  class="" aria-label="20.08.2023 - An diesem Tag sind keine Termine möglich" title="20.08.2023 - An diesem Tag sind keine Termine möglich">20</td>
+
+                                                                                            </tr>
+                        <tr>
+                                                                                                <td tabindex=0 class="" aria-label="21.08.2023 - An diesem Tag sind keine Termine möglich" title="21.08.2023 - An diesem Tag sind keine Termine möglich">21</td>
+
+        <td tabindex=0 class="" aria-label="22.08.2023 - An diesem Tag sind keine Termine möglich" title="22.08.2023 - An diesem Tag sind keine Termine möglich">22</td>
+
+        <td tabindex=0 class="" aria-label="23.08.2023 - An diesem Tag sind keine Termine möglich" title="23.08.2023 - An diesem Tag sind keine Termine möglich">23</td>
+
+        <td tabindex=0 class="" aria-label="24.08.2023 - An diesem Tag sind keine Termine möglich" title="24.08.2023 - An diesem Tag sind keine Termine möglich">24</td>
+
+        <td tabindex=0 class="" aria-label="25.08.2023 - An diesem Tag sind keine Termine möglich" title="25.08.2023 - An diesem Tag sind keine Termine möglich">25</td>
+
+        <td tabindex=0 class="" aria-label="26.08.2023 - An diesem Tag sind keine Termine möglich" title="26.08.2023 - An diesem Tag sind keine Termine möglich">26</td>
+
+        <td  class="" aria-label="27.08.2023 - An diesem Tag sind keine Termine möglich" title="27.08.2023 - An diesem Tag sind keine Termine möglich">27</td>
+
+                                                                                            </tr>
+     <tr>
+        <td tabindex=0 class="" aria-label="28.08.2023 - An diesem Tag sind keine Termine möglich" title="28.08.2023 - An diesem Tag sind keine Termine möglich">28</td>
+        <td tabindex=0 class="" aria-label="29.08.2023 - An diesem Tag sind keine Termine möglich" title="29.08.2023 - An diesem Tag sind keine Termine möglich">29</td>
+        <td tabindex=0 class="" aria-label="30.08.2023 - An diesem Tag sind keine Termine möglich" title="30.08.2023 - An diesem Tag sind keine Termine möglich">30</td>
+        <td tabindex=0 class="" aria-label="31.08.2023 - An diesem Tag sind keine Termine möglich" title="31.08.2023 - An diesem Tag sind keine Termine möglich">31</td>
+       <td colspan="3">&nbsp;</td>
+     </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            
+</div>
+
+
+            
+{% endblock %}                
+{% block foot %}
+
+</div>
+<div style="clear:left; background:url(/terminvereinbarung/termin/blank.png);">
+    An blau unterlegten und fett geschriebenen Tagen sind noch Termine verfügbar.<br>
+    An rot unterlegten Tagen sind alle Termine ausgebucht.<br>
+    An weiß unterlegten Tagen sind noch keine Termine zur Buchung freigegeben.
+</div>
+	
+                                            </div>
+                 </div>
+            </div>
+                                                     
+                                <!-- INCLUDE BEGIN: Infocolumn -->
+
+<div class="span3 column-right html5-aside" role="complementary">
+    <h2 class="aural">Es folgen die Inhalte der rechten Seitenspalte</h2>
+    <div class="html5-section content-marginal">
+
+    
+    
+
+<!--FLEX BEGIN: Text/Bild-->
+<div class="html5-section block modul-text_bild">    <div class="html5-header header">
+                        <h2 class="title" id="headline_8_15">FAQ / Hilfestellung</h2>    </div>
+            <div class="html5-section body">
+                <div class="text">
+            <div class="textile">
+  <ul>
+    <li>
+      <a href="https://service.berlin.de/terminvereinbarung/hinweise/">Häufig gestellte Fragen zum Terminbuchungssystem</a>
+    </li>
+  </ul>
+</div>        </div>
+            </div>
+</div>
+
+<!--FLEX END: Text/Bild-->
+<!--FLEX BEGIN: Text/Bild-->
+<div class="html5-section block modul-text_bild">    <div class="html5-header header">
+                        <h3 class="title" id="headline_8_18">Mit weniger Klicks zur Terminbuchung</h3>    </div>
+            <div class="html5-section body">
+                <div class="text">
+            <div class="textile">
+  <p>
+    Die Auswahl “Termin buchen” führt Sie nun direkt zu dem Kalendermonat, in dem ein Termin frühestens buchbar ist. Sie müssen sich nicht mehr manuell zu einem Monat mit freien Termin durchklicken.
+  </p>
+  <p>
+    Sollte für Ihre Auswahl kein Termin verfügbar sein gelangen Sie auf eine Hinweisseite, auf der Sie die Terminsuche wiederholen können.<br />
+    Mehr dazu unter: <a href="https://service.berlin.de/terminvereinbarung/hinweise/#faq_1_18">Es ist nichts mehr frei, was nun?</a>
+  </p>
+</div>        </div>
+            </div>
+</div>
+
+<!--FLEX END: Text/Bild-->
+<!-- FLEX BEGIN: ContactInclude --><div class="html5-section modul-contactinclude"></div><!-- FLEX END: ContactInclude -->
+    </div>
+</div>
+<!-- INCLUDE END: Infocolumn -->
+
+
+                    </div>
+                    </div><!-- /container -->
+        </div><!-- /container-wrapper -->
+    </div><!-- /layout-grid__area--maincontent -->
+
+                <div id="layout-grid__area--contentfooter" class="kiekma">
+        <!-- Footer.view -->
+
+<!-- /Footer.view -->
+        </div>
+
+    </div>
+    <!-- END: CONTENTWRAPPERGRID #layout-grid -->
+
+        <!-- Landesfooter.view -->
+ 
+
+      
+
+
+
+</div>
+
+{% endblock %}                
+
+
+<!-- END: PAGEWRAPPER #page-wrapper -->
+
+
+
+<!-- footer here -->
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
